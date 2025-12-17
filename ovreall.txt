@@ -1,0 +1,98 @@
+Department
+- id
+- name
+
+Employee
+- id
+- name
+- email
+- password
+- role
+- position
+- phoneNumber
+- departmentId
+- isActive
+
+EvaluationAllocation
+- id
+- evaluationComment
+- evaluationId
+- evaluateeId
+- evaluatorId
+- evaluatorRole
+- status
+- signatureData
+- signatureDate
+- submittedAt
+
+Evaluation
+- id
+- period
+- evaluationYear
+- startDate
+- endDate
+
+SelfIndicatorResult
+- id
+- allocationId
+- indicatorId
+- selectedLevelId
+- evidenceFilePath
+- evidenceUrl
+
+IndicatorResult
+- id
+- allocationId
+- indicatorId
+- selectedLevelId
+
+EvaluationTopic
+- id
+- title
+- description
+- evaluationId
+
+Indicator
+- id
+- title
+- description
+- topicId
+- evidenceDescription
+- IndicatorType
+- weight
+
+IndicatorLevel
+- id
+- title
+- level
+- indicatorId
+
+/////////
+
+npm create nuxt@latest {project-name}
+npm i @mdi/font @pinia/nuxt axios jwt-decode pinia sass vuetify nuxtjs/tailwindcss vite-plugin-vuetify
+
+/////////
+
+GET /api/topics
+POST /api/topics
+PUT /api/topics/:id
+DELETE /api/topics/:id
+
+GET /api/evaluations
+POST /api/evaluations
+PUT /api/evaluations/:id
+
+GET /api/indicators
+POST /api/indicators
+PUT /api/indicators/:id
+DELETE /api/indicators/:id
+
+POST /api/indicators/:id/levels
+
+GET /api/allocations
+POST /api/allocations
+
+GET /api/reports/overview
+GET /api/reports/progress
+GET /api/reports/employee/:id

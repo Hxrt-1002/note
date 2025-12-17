@@ -1,0 +1,47 @@
+//admin
+Get /api/topics
+Post /api/topics
+Put /api/topics/:id
+Delete /api/topics/:id
+
+Get /api/evaluations
+Post /api/evaluations
+Put /api/evaluations/:id
+
+Get /api/indicators
+Post /api/indicators
+Put /api/indicators/:id
+Delete /api/indicators/:id
+
+Post /api/indicators/:id/levels
+
+Get /api/allocations
+Post /api/allocations
+
+Get /api/reports/overview
+Get /api/reports/progress
+Get /api/reports/employee/:id
+
+//employee
+Post /api/auth/register
+
+Get /api/employee/profile
+Put /api/employee/profile
+
+Get /api/self-evaluation/progress
+Post /api/self-evaluation
+Post /api/self-evaluation/upload
+
+Get /api/employee/result
+Get /api/employee/export-pdf
+
+//evaluator
+Get /api/evaluator/assigned
+
+Get /api/evaluator/employee/:id
+
+Post /api/evaluator/score
+Post /api/evaluator/comment
+
+Post /api/evaluator/signature
+Post /api/evaluator/submit
