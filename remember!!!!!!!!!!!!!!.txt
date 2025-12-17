@@ -1,0 +1,50 @@
+npm create nuxt@latest evaluation-system
+npm i @mdi/font @pinia/nuxt axios jwt-decode pinia sass vuetify @nuxtjs/tailwindcss vite-plugin-vuetify
+
+PATH
+Frontend
+|-app
+ |-composables
+ |-layouts
+  |-default.vue
+ |-middleware
+  |-admin.js
+  |-auth.js
+  |-employee.js
+  |-evaluator.js
+ |-pages
+  |-/admin
+   |-
+  |-/evaluator
+   |-
+  |-/employee
+   |-
+  |-dashboard
+  |-index.vue
+  |-register.vue
+  |-login.vue
+ |-plugins
+  |-auth.js
+  |-vuetify.js
+ |-stores
+  |-auth.js
+   |-state: () => ({
+    |-user: null
+    |-token: null
+    |-isLoggedIn: false
+   })
+   |-getters: {
+    |- getUserName
+    |- getUserEmail
+    |- getUserRole
+    |- getUserId
+    |- getDepartmentId
+    |- getPosition
+    |- getAuthenticated
+    |- getAdmin
+    |- getEmployee
+    |- getEvaluator
+   }
+   actions: {
+    a
+   }
