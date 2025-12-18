@@ -1,0 +1,54 @@
+/auth/login
+/auth/register
+/auth/me
+
+//admin
+get /admin/topics
+post /admin/topics
+put /admin/topics/:id
+delete /admin/topics/:id
+
+get /admin/evaluations
+post /admin/evaluations
+put /admin/evaluations/:id
+
+get /admin/indicators
+post /admin/indicators
+put /admin/indicators/:id
+delete /admin/indicators/:id
+post /admin/indicators/:id/levels
+
+get /admin/allocations
+post /admin/allocations
+
+get /admin/employees
+get /admin/departments
+get /admin/employees/:id/role
+
+//employee
+get /employee/my-evaluations
+get /employee/departments
+get /employee/results/:allocationId
+get /employee/evaluation/:allocationId
+get /employee/progress/:allocationId
+post /employee/self-evaluation
+post /employee/upload-evidence
+post /employee/submit-self-evaluation
+
+//evaluator
+get /evaluator/assigned
+get /evaluator/employee/:allocationId
+get /evaluator/summary/:allocationId
+post /evaluator/score
+post /evaluator/comment
+post /evaluator/signature
+post /evaluator/submit
+
+const login = async (email, password) => {
+ try {
+  const response = await api.post('/auth/login' {email, password})
+  return response.data
+ } catch (error) {
+  throw response.error?.data || error.message
+ }
+}
